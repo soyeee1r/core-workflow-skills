@@ -1,0 +1,249 @@
+{
+  "version": "2026-09-10",
+  "profile": "private-personal-snapshot",
+  "skills": [
+    {
+      "name": "douyin-comment-collector",
+      "title": "抖音评论与弹幕爬楼",
+      "dependencies": "Node.js 18+（内置 fetch）、Python 3.10+；飞书交付需要 lark-cli、lark-shared、lark-wiki、lark-doc、lark-im。",
+      "source_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "6da6c8f23101e2f673ecff149d11ac5a696318377f5f5f9e194f654defa37590",
+          "bytes": 6844
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "c4f5352527145070e1a11e65e008f9e437f47cdd844c95f8c513431dd92d2d7e",
+          "bytes": 367
+        },
+        {
+          "path": "references/collection-pipeline.md",
+          "sha256": "aee3329aff13ea0353af1524a8c48c21bf40dac37f70028633d2b95677e19757",
+          "bytes": 3317
+        },
+        {
+          "path": "references/document-template.md",
+          "sha256": "da83d7e14ac25dc873745144d0cafe45898c2523874eacdb879de46c3e916085",
+          "bytes": 3813
+        },
+        {
+          "path": "references/existing-chrome-cdp.md",
+          "sha256": "e45f8107eba25a6539855f736b26e2804ec1ac6bfa10aefdab51f6d162dcb5b7",
+          "bytes": 2643
+        },
+        {
+          "path": "references/existing-chrome-extension.md",
+          "sha256": "141cf7b76cc1872d86d94ea2d76fda2d71d02ca0fe10c5be4de27b72e1511e97",
+          "bytes": 2431
+        },
+        {
+          "path": "references/feishu-delivery.md",
+          "sha256": "fb73ccb034296a535daa70d75a2644db4915103c73bf6abcefa6375f333c805d",
+          "bytes": 4608
+        },
+        {
+          "path": "references/mediacrawler.md",
+          "sha256": "e6342d97272ec457bba409a5689999f2c09e6d958e3d78b5bc2dfae07c288125",
+          "bytes": 1953
+        },
+        {
+          "path": "references/prioritization.md",
+          "sha256": "c2f6eff4fe1fd89816ec7e6e94f4d581253a0ca26938a6d1acb26da08f71cfb8",
+          "bytes": 3333
+        },
+        {
+          "path": "references/schema.md",
+          "sha256": "115092f8f88416d52e9007928265f0f77124c7df7e26865a1a9169bb4c9be78a",
+          "bytes": 2203
+        },
+        {
+          "path": "scripts/collect_comments_api.mjs",
+          "sha256": "8e28008b910803f3da150a3844e58e92c27018ae654a200cf0d33b6b37328964",
+          "bytes": 21457
+        },
+        {
+          "path": "scripts/collect_cookie_api.mjs",
+          "sha256": "14ac9e843939d1b5082cf2c63d62170dd0dc6b560dae9227352708c82365951b",
+          "bytes": 200
+        },
+        {
+          "path": "scripts/collect_danmaku_api.mjs",
+          "sha256": "e4c8d8224414c210f65c8727585e042038478eef4ef985aed2f3db1995126200",
+          "bytes": 12026
+        },
+        {
+          "path": "scripts/collect_existing_chrome.mjs",
+          "sha256": "b4839cd25bcf204825ff04a2efa19517ae0b14164f4b5fc9ec1424671df2507c",
+          "bytes": 13425
+        },
+        {
+          "path": "scripts/collect_mediacrawler.py",
+          "sha256": "51c1eab77ffd2849b1382525d2333474805730d2b2fb64f31afef327f0d7036b",
+          "bytes": 8262
+        },
+        {
+          "path": "scripts/collect_sweep.mjs",
+          "sha256": "68eed3c38b805a53e88c0c24b9a544e5eb56866e69211836add5cde7945a8f70",
+          "bytes": 6499
+        },
+        {
+          "path": "scripts/configure_douyin_cookie.sh",
+          "sha256": "2bb5e006dbc6a974832b12de65217b11c42b3dae49ecdcbdc2de0e207e891abc",
+          "bytes": 662
+        },
+        {
+          "path": "scripts/normalize_comments.py",
+          "sha256": "e197ba9e500c8ab8153953e94370c794bc368a838984f6782373a67424d0bb76",
+          "bytes": 9658
+        },
+        {
+          "path": "scripts/normalize_danmaku.py",
+          "sha256": "62822424fd312f82d1d1de8312375a2be8d146524dbca637c47dcad670dd8a60",
+          "bytes": 5968
+        },
+        {
+          "path": "scripts/rank_comments.py",
+          "sha256": "d8ade0460795f146206cfda717d54bf218a74ada9afdfc7548d5b1dc58077a2c",
+          "bytes": 8740
+        },
+        {
+          "path": "third_party/MediaCrawler/LICENSE",
+          "sha256": "aeff21de8609bec9d6e939bbbba7c2914ae0a6e7c9470ea7945c03f7d17a2a33",
+          "bytes": 4775
+        },
+        {
+          "path": "third_party/MediaCrawler/douyin.js",
+          "sha256": "ff5cb3133e2717523ffb3f96679e3f5d23bd31a999411ea604cff9a51da9e26e",
+          "bytes": 15388
+        }
+      ]
+    },
+    {
+      "name": "summarize-x-content",
+      "title": "X 公开链接读取",
+      "dependencies": "Python 3.10+；视频抽帧需要 ffmpeg，可通过 FFMPEG_BINARY 或 PATH 指定。",
+      "source_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "8eed0faad1fbe49966c010b8a32bb8fe106e39442cb1f3f58ebced0cf273c9e7",
+          "bytes": 3492
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "2f90c9d5419ceaf792ccd522ebe0b5d7ef57581da97e436237fbea4cfedf7811",
+          "bytes": 278
+        },
+        {
+          "path": "scripts/fetch_x_content.py",
+          "sha256": "aa62d2eb216d617e5fa279be2948ddc7cef0d762c0b13dea8f3a90fc528725dc",
+          "bytes": 26878
+        }
+      ]
+    },
+    {
+      "name": "collect-content-performance-data",
+      "title": "发布后定时回收数据",
+      "dependencies": "Python 3.10+；lark-doc、lark-im 及飞书登录能力；平台 API/连接器或已登录的受控浏览器；支持持久化精确单次任务的宿主。",
+      "source_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "85767c604927d03871bbdb8cbb8a0a1b5b2257bb9e471c8ed5b7ee409f39406f",
+          "bytes": 11797
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "038afbc586668976a5741a15dd2c1bdc4a2ea727d8435bc8ed17527bc8d15b77",
+          "bytes": 335
+        },
+        {
+          "path": "assets/content-performance-state.json",
+          "sha256": "02071895b99b78bca50ffb3ad342aa692f2e7cd0c947bf363aeeded5c462d3c2",
+          "bytes": 120
+        },
+        {
+          "path": "references/business-rules.md",
+          "sha256": "19dff19a0f12adb4a69e5a0af25a460495d44db22de83263e4efe47faa688c59",
+          "bytes": 4640
+        },
+        {
+          "path": "references/data-contracts.md",
+          "sha256": "d3449fd0f6db3771cd9ed177466d46a14fe1adaf7e33469978aab8d606e591bb",
+          "bytes": 3990
+        },
+        {
+          "path": "references/data-sources.md",
+          "sha256": "00c9568d01b7a59564832fab9d60c6637f72460222a1ba7c0ed3e777dd59fc24",
+          "bytes": 3419
+        },
+        {
+          "path": "references/output-contracts.md",
+          "sha256": "fd1027e950793163ad54f00868237f2f0f458ba71682761197ce58bd65bd74ed",
+          "bytes": 3695
+        },
+        {
+          "path": "references/test-cases.md",
+          "sha256": "c20a49906095786d18d5e0df1f0dc2eb342121507fb41d3f2688daf6e3c372d7",
+          "bytes": 6983
+        },
+        {
+          "path": "scripts/test_validate_snapshot.py",
+          "sha256": "09168d4b1838558ae896a8f53ab3f7b3e17cc7bb572ad78709edde72df4ab6c9",
+          "bytes": 4806
+        },
+        {
+          "path": "scripts/validate_snapshot.py",
+          "sha256": "cdbbad823b4b89fc4191da77995a9c32ccf7f76ae480e04d3cf7f320eb73dd18",
+          "bytes": 5390
+        }
+      ]
+    },
+    {
+      "name": "manage-personal-work-reports",
+      "title": "个人工作助理",
+      "dependencies": "Python 3.10+；lark-shared、lark-im、lark-wiki、lark-doc、read-content-project-board、read-content-progress-reports、lark-minutes 或 lark-vc、lark-calendar；需要飞书任务时另需 lark-task。",
+      "source_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "b2eff1d9a3779f78a118feef8c07011b7c1ae9d344981cfcbf1fda60e006ce4a",
+          "bytes": 10645
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "0b09b51af36390105eeb1eeaea9ab02b3791fdc00eab213b9e46d74e30a3fdcb",
+          "bytes": 283
+        },
+        {
+          "path": "references/execution-gates.md",
+          "sha256": "2dd68f14b56fd03a268cd2df7190459bcf7d9013ad8091b5c399281735ddc3b1",
+          "bytes": 2139
+        },
+        {
+          "path": "references/feishu-scope.md",
+          "sha256": "a5358e64f48e28b7dfef65887fe11eae41997e01970d84cf9efed36dfebd5ecf",
+          "bytes": 3776
+        },
+        {
+          "path": "references/report-xml.md",
+          "sha256": "aa1c56e2ec3e99fdcfa36528653fed539b241500dd559895e004a6a7a3baf663",
+          "bytes": 3031
+        },
+        {
+          "path": "references/workflow-contract.md",
+          "sha256": "02f9b6e879068ef0095f130e05ec41e528a037e1a4034dd9ba9c1bb14ec93666",
+          "bytes": 9120
+        },
+        {
+          "path": "scripts/validate_personal_run_receipt.py",
+          "sha256": "015b88a37f8c4f465c8015a590ff226288f96d14957f06387a901650e6099bfc",
+          "bytes": 3779
+        },
+        {
+          "path": "scripts/validate_report_xml.py",
+          "sha256": "57e11763e4863d665d3ca41b343653c01c3d3e3878955045c850ae85d6944396",
+          "bytes": 3101
+        }
+      ]
+    }
+  ]
+}
