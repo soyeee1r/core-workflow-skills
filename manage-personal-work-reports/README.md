@@ -55,6 +55,14 @@ flowchart TD
 
 资源定位与会话白名单见 [feishu-scope.md](references/feishu-scope.md)。默认不下载二进制附件、不访问无必要的外部链接。
 
+## 会议整理与个人助理的关系
+
+会议整理有独立入口：`lark-workflow-meeting-summary` 负责按时段汇总会议，`process-content-meeting-mention` 负责指定群内 @ 后的 Markdown 或行动画板交付。它们借助 `lark-vc`、`lark-note`、`lark-minutes` 等读取资料；本机还包含按会议类型整理的业务规则。
+
+个人助理按需从会议原文中核实与本人有关的动作、决定和待确认事项，再接到今日待办、日报或周月复盘中。它不承担整场会议的独立产物交付。**本仓库的四个包未包含会议技能本体。**
+
+[会议工作流、不同会议的整理口径与触发示例 →](../docs/meeting-workflow.md)
+
 ## 它为什么能接续昨天
 
 | 本地记录 | 保存的内容 | 更新规则 |
