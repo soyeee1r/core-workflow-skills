@@ -1,0 +1,7 @@
+interface:
+  display_name: "抖音评论与弹幕扫楼"
+  short_description: "抓取评论和全时长弹幕，筛选后归档飞书并回发群卡片"
+  default_prompt: "使用 $douyin-comment-collector 对这些抖音作品执行评论 + 弹幕扫楼，生成联合文档并向触发群发送带文档链接的卡片。"
+
+policy:
+  allow_implicit_invocation: true
