@@ -4,7 +4,7 @@
 
 ## 固定目标与身份
 
-- 归档库：任小艺个人知识库 `my_library`，`space_id` 为 `7332301510749470722`。
+- 归档库：使用者个人知识库 `my_library`，`space_id` 为 `7332301510749470722`。
 - 父节点：“查水表”，`parent_node_token` 为 `F9j7wrTwlizBLhkykmmc6FxendK`。
 - 文档操作显式使用 `--as user`；群消息显式使用 `--as bot`，发送者为 0615。
 - 收件群默认只能使用触发事件的 `source_chat_id`。用户另行明确指定群时，先解析并核对目标再发送。

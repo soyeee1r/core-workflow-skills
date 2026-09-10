@@ -1,6 +1,6 @@
 {
   "version": "2026-09-10",
-  "profile": "private-personal-snapshot",
+  "profile": "private-personal-snapshot-names-generalized",
   "skills": [
     {
       "name": "douyin-comment-collector",
@@ -9,8 +9,9 @@
       "source_files": [
         {
           "path": "SKILL.md",
-          "sha256": "6da6c8f23101e2f673ecff149d11ac5a696318377f5f5f9e194f654defa37590",
-          "bytes": 6844
+          "sha256": "b74437cf1ed39c2ca2bd1edec225308b432569f8817eb73796bed450ee5ab5d1",
+          "bytes": 6844,
+          "original_sha256": "6da6c8f23101e2f673ecff149d11ac5a696318377f5f5f9e194f654defa37590"
         },
         {
           "path": "agents/openai.yaml",
@@ -39,8 +40,9 @@
         },
         {
           "path": "references/feishu-delivery.md",
-          "sha256": "fb73ccb034296a535daa70d75a2644db4915103c73bf6abcefa6375f333c805d",
-          "bytes": 4608
+          "sha256": "273da889e7cf721c3eacfc40087574eb7c144af3907cd837425f963a664e6f85",
+          "bytes": 4608,
+          "original_sha256": "fb73ccb034296a535daa70d75a2644db4915103c73bf6abcefa6375f333c805d"
         },
         {
           "path": "references/mediacrawler.md",
@@ -205,8 +207,9 @@
       "source_files": [
         {
           "path": "SKILL.md",
-          "sha256": "b2eff1d9a3779f78a118feef8c07011b7c1ae9d344981cfcbf1fda60e006ce4a",
-          "bytes": 10645
+          "sha256": "5cc90b0dc1fb2dcd85970d67eeefe47b02d6766cc1728ed7ded077a9a9e22ca5",
+          "bytes": 10633,
+          "original_sha256": "b2eff1d9a3779f78a118feef8c07011b7c1ae9d344981cfcbf1fda60e006ce4a"
         },
         {
           "path": "agents/openai.yaml",
@@ -220,18 +223,21 @@
         },
         {
           "path": "references/feishu-scope.md",
-          "sha256": "a5358e64f48e28b7dfef65887fe11eae41997e01970d84cf9efed36dfebd5ecf",
-          "bytes": 3776
+          "sha256": "c0654d1788888eda9af210417f95e1eff4a6c4f4aef5dc7cea6a39494c8ebf6c",
+          "bytes": 3776,
+          "original_sha256": "a5358e64f48e28b7dfef65887fe11eae41997e01970d84cf9efed36dfebd5ecf"
         },
         {
           "path": "references/report-xml.md",
-          "sha256": "aa1c56e2ec3e99fdcfa36528653fed539b241500dd559895e004a6a7a3baf663",
-          "bytes": 3031
+          "sha256": "9bfc4ea725eee39c729066d9573ea15df58778d7e948598875ff15913ca41c9a",
+          "bytes": 3031,
+          "original_sha256": "aa1c56e2ec3e99fdcfa36528653fed539b241500dd559895e004a6a7a3baf663"
         },
         {
           "path": "references/workflow-contract.md",
-          "sha256": "02f9b6e879068ef0095f130e05ec41e528a037e1a4034dd9ba9c1bb14ec93666",
-          "bytes": 9120
+          "sha256": "0ec4ac6a28c5ce97791a4059696a470b84032f9996a29138a5c631dfd49e68b4",
+          "bytes": 9108,
+          "original_sha256": "02f9b6e879068ef0095f130e05ec41e528a037e1a4034dd9ba9c1bb14ec93666"
         },
         {
           "path": "scripts/validate_personal_run_receipt.py",
@@ -245,5 +251,8 @@
         }
       ]
     }
+  ],
+  "transformations": [
+    "姓名和个人称呼在分发文字中替换为通用表述；业务脚本未变。"
   ]
 }

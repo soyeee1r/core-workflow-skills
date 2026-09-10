@@ -4,7 +4,7 @@
 
 周报核心顺序为：
 
-1. 标题 `召尔工作周报（M.D-M.D）`
+1. 标题 `个人工作周报（M.D-M.D）`
 2. 上周遗留待办
 3. 本周工作计划（保留图片与分栏结构；分栏文字可根据内容大表更新）
 4. 三列表头：日期 / 逐日待办及完成情况 / 完成情况及未完成原因/复盘
@@ -48,7 +48,7 @@
 ```bash
 python3 scripts/validate_report_xml.py report.xml \
   --mode plan \
-  --expected-title '召尔工作周报（8.3-8.7）' \
+  --expected-title '个人工作周报（8.3-8.7）' \
   --expected-date 8.3 --expected-date 8.4 --expected-date 8.5 \
   --expected-date 8.6 --expected-date 8.7
 ```
@@ -57,7 +57,7 @@ python3 scripts/validate_report_xml.py report.xml \
 
 ```bash
 python3 scripts/validate_report_xml.py report.xml \
-  --mode recap --expected-title '召尔工作周报（8.3-8.7）' \
+  --mode recap --expected-title '个人工作周报（8.3-8.7）' \
   --expected-date 8.6
 ```
 
