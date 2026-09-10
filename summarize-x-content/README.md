@@ -1,4 +1,4 @@
-# X 公开链接读取
+# X 链接读取
 
 ![工作流程](assets/workflow.svg)
 

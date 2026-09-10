@@ -4,7 +4,7 @@
   "skills": [
     {
       "name": "douyin-comment-collector",
-      "title": "抖音评论与弹幕爬楼",
+      "title": "抖音爬楼",
       "dependencies": "Node.js 18+（内置 fetch）、Python 3.10+；飞书交付需要 lark-cli、lark-shared、lark-wiki、lark-doc、lark-im。",
       "source_files": [
         {
@@ -123,7 +123,7 @@
     },
     {
       "name": "summarize-x-content",
-      "title": "X 公开链接读取",
+      "title": "X 链接读取",
       "dependencies": "Python 3.10+；视频抽帧需要 ffmpeg，可通过 FFMPEG_BINARY 或 PATH 指定。",
       "source_files": [
         {
@@ -145,7 +145,7 @@
     },
     {
       "name": "collect-content-performance-data",
-      "title": "发布后定时回收数据",
+      "title": "定时数据回收",
       "dependencies": "Python 3.10+；lark-doc、lark-im 及飞书登录能力；平台 API/连接器或已登录的受控浏览器；支持持久化精确单次任务的宿主。",
       "source_files": [
         {
@@ -202,7 +202,7 @@
     },
     {
       "name": "manage-personal-work-reports",
-      "title": "个人工作助理",
+      "title": "个人助理",
       "dependencies": "Python 3.10+；lark-shared、lark-im、lark-wiki、lark-doc、read-content-project-board、read-content-progress-reports、lark-minutes 或 lark-vc、lark-calendar；需要飞书任务时另需 lark-task。",
       "source_files": [
         {
