@@ -1,0 +1,7 @@
+interface:
+  display_name: "X 内容摘要"
+  short_description: "读取 X 帖子、长文、图片与视频并形成中文摘要"
+  default_prompt: "Use $summarize-x-content to read this X link and give me a concise Chinese summary."
+
+policy:
+  allow_implicit_invocation: true
