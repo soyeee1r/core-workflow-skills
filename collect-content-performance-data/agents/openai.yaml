@@ -1,4 +1,4 @@
 interface:
   display_name: "回收内容发布数据"
-  short_description: "发布后24小时登录平台后台并把指标快照写入项目文档"
-  default_prompt: "Use $collect-content-performance-data to collect the due 2h, 6h, 24h, or 48h performance snapshot for a published video and append it to the mapped project document."
+  short_description: "公开链路回收抖音数据，夸克仅补播放量"
+  default_prompt: "Use $collect-content-performance-data to collect public Douyin metrics, comments, and danmaku without a browser; use the existing logged-in Quark creator page only to supplement playback count, then update the mapped Feishu document and public Miaoda report."

@@ -53,6 +53,8 @@ def validate_metric(metric: Any, index: int) -> str:
             raise ValueError(f"metrics[{index}].value must be non-negative")
         if metric["unit"] == "ratio" and value > 1:
             raise ValueError(f"metrics[{index}].value must be between 0 and 1 for ratio")
+        if metric["name"] == "views" and value == 0:
+            raise ValueError("views=0 from the public endpoint must be marked unavailable")
     return metric["name"]
 
 
@@ -62,6 +64,8 @@ def validate(payload: Any) -> dict[str, Any]:
     for field in REQUIRED_TEXT:
         if not isinstance(payload.get(field), str) or not payload[field].strip():
             raise ValueError(f"{field} must be non-empty text")
+    if payload["platform"] != "douyin":
+        raise ValueError("public collection only supports platform=douyin")
     scheduled_window = payload["scheduled_window"]
     if scheduled_window not in WINDOW_HOURS:
         raise ValueError("scheduled_window must be 2h, 6h, 24h, or 48h")
@@ -79,8 +83,8 @@ def validate(payload: Any) -> dict[str, Any]:
         )
 
     source = payload.get("source")
-    if not isinstance(source, dict) or source.get("method") not in {"api", "connector", "export", "browser"}:
-        raise ValueError("source.method must be api, connector, export, or browser")
+    if not isinstance(source, dict) or source.get("method") != "api":
+        raise ValueError("source.method must be api in public no-browser mode")
     evidence = source.get("evidence")
     if not isinstance(evidence, list) or not evidence or not all(isinstance(item, str) and item.strip() for item in evidence):
         raise ValueError("source.evidence must contain at least one evidence reference")

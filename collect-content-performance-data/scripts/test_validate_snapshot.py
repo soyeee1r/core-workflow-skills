@@ -20,14 +20,14 @@ def valid_payload() -> dict:
     return {
         "publication_id": "pub_demo_001",
         "project_id": "project_demo_001",
-        "platform": "demo-platform",
-        "account_id": "demo-account",
+        "platform": "douyin",
+        "account_id": "public-anonymous",
         "content_id": "video-001",
         "canonical_url": "https://example.com/video-001",
         "published_at": "2026-08-07T10:00:00+08:00",
         "scheduled_window": "24h",
         "collected_at": "2026-08-08T10:12:00+08:00",
-        "source": {"method": "browser", "evidence": ["screenshot:demo.png"]},
+        "source": {"method": "api", "evidence": ["file:/tmp/public-metrics.json"]},
         "metrics": [
             {
                 "name": "views",
@@ -116,6 +116,18 @@ class SnapshotValidationTests(unittest.TestCase):
         payload = valid_payload()
         payload["metrics"][0].update({"unit": "ratio", "value": 1.01})
         with self.assertRaisesRegex(ValueError, "between 0 and 1"):
+            MODULE.validate(payload)
+
+    def test_browser_source_is_rejected(self) -> None:
+        payload = valid_payload()
+        payload["source"]["method"] = "browser"
+        with self.assertRaisesRegex(ValueError, "no-browser mode"):
+            MODULE.validate(payload)
+
+    def test_public_play_count_zero_must_be_unavailable(self) -> None:
+        payload = valid_payload()
+        payload["metrics"][0]["value"] = 0
+        with self.assertRaisesRegex(ValueError, "must be marked unavailable"):
             MODULE.validate(payload)
 
 

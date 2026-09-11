@@ -146,17 +146,17 @@
     {
       "name": "collect-content-performance-data",
       "title": "定时数据回收",
-      "dependencies": "Python 3.10+；lark-doc、lark-im 及飞书登录能力；平台 API/连接器或已登录的受控浏览器；支持持久化精确单次任务的宿主。",
+      "dependencies": "Node.js 18+、Python 3.10+；douyin-comment-collector；飞书文档、妙搭、消息与登录能力；持久化单次调度；播放量补采需用户电脑现有夸克登录态。",
       "source_files": [
         {
           "path": "SKILL.md",
-          "sha256": "85767c604927d03871bbdb8cbb8a0a1b5b2257bb9e471c8ed5b7ee409f39406f",
-          "bytes": 11797
+          "sha256": "b67f80173a22017cf0a8735a336ed21b197db6a5918550b1ef05799cc0631ecf",
+          "bytes": 8713
         },
         {
           "path": "agents/openai.yaml",
-          "sha256": "038afbc586668976a5741a15dd2c1bdc4a2ea727d8435bc8ed17527bc8d15b77",
-          "bytes": 335
+          "sha256": "81d371b29f912bbfe714aed08429134c4cbd6e5ee9a9554f9905d7aad14c66c9",
+          "bytes": 411
         },
         {
           "path": "assets/content-performance-state.json",
@@ -164,41 +164,67 @@
           "bytes": 120
         },
         {
+          "path": "assets/interactive-report-client.js",
+          "sha256": "ed329b52d31c161eab52f19565c7ce6c64146ce08955669d8227bd8484378ac7",
+          "bytes": 9833
+        },
+        {
+          "path": "references/audience-change-contract.md",
+          "sha256": "113f5a77da9e1a23db65a10c5bbb7b425739baf1ae49d2180b8f3014faac849d",
+          "bytes": 2986
+        },
+        {
           "path": "references/business-rules.md",
-          "sha256": "19dff19a0f12adb4a69e5a0af25a460495d44db22de83263e4efe47faa688c59",
-          "bytes": 4640
+          "sha256": "7ef7c006f5f13fef0b762fca99231a5d16d9823f14ff5f5adcbd7240964bcbe9",
+          "bytes": 3286
         },
         {
           "path": "references/data-contracts.md",
-          "sha256": "d3449fd0f6db3771cd9ed177466d46a14fe1adaf7e33469978aab8d606e591bb",
-          "bytes": 3990
+          "sha256": "1bd14742b1a5d3c59be63da8736771b8eab2ba1c64d973dc7fac0b99a69c49f9",
+          "bytes": 5184
         },
         {
           "path": "references/data-sources.md",
-          "sha256": "00c9568d01b7a59564832fab9d60c6637f72460222a1ba7c0ed3e777dd59fc24",
-          "bytes": 3419
+          "sha256": "d8c696beb0331b4af8b68bb77df369e7733bae69cbc823a84cb5c32eb7c37d54",
+          "bytes": 3180
         },
         {
           "path": "references/output-contracts.md",
-          "sha256": "fd1027e950793163ad54f00868237f2f0f458ba71682761197ce58bd65bd74ed",
-          "bytes": 3695
+          "sha256": "5cb5924d79fa5eaf71a13da6c029ec287ca0302648b2e6626108beea69347049",
+          "bytes": 4772
         },
         {
           "path": "references/test-cases.md",
-          "sha256": "c20a49906095786d18d5e0df1f0dc2eb342121507fb41d3f2688daf6e3c372d7",
-          "bytes": 6983
+          "sha256": "e032cbba233245b64b4537e43cc0cd48fc24237bad6c861bf0ca983add1bc864",
+          "bytes": 4157
+        },
+        {
+          "path": "scripts/build_interactive_report.mjs",
+          "sha256": "17181fe4848b3a8bcd02b725ca1537f0a09a0d944b98aaa16d3cd4cb25a5e690",
+          "bytes": 13570
+        },
+        {
+          "path": "scripts/collect_douyin_public_metrics.mjs",
+          "sha256": "48d14da756ceca874389fa7cb957412da5e7c7f63eedac6557e151d8a395cc42",
+          "bytes": 8126
         },
         {
           "path": "scripts/test_validate_snapshot.py",
-          "sha256": "09168d4b1838558ae896a8f53ab3f7b3e17cc7bb572ad78709edde72df4ab6c9",
-          "bytes": 4806
+          "sha256": "95690a1ceb9062fee20e2be493b88acae51f8ca379b1902320dd676039dc601c",
+          "bytes": 5317
+        },
+        {
+          "path": "scripts/validate_audience_snapshot.mjs",
+          "sha256": "a59c7571b94ac072424cef5cde42e4c1a2cf92d2c3ec6963e3821bb09b3e42c7",
+          "bytes": 3539
         },
         {
           "path": "scripts/validate_snapshot.py",
-          "sha256": "cdbbad823b4b89fc4191da77995a9c32ccf7f76ae480e04d3cf7f320eb73dd18",
-          "bytes": 5390
+          "sha256": "b737e34ade41af2b8048c876b8fb8f9caf9c49c9411139e213474472497cb24b",
+          "bytes": 5606
         }
-      ]
+      ],
+      "updated_at": "2026-09-11"
     },
     {
       "name": "manage-personal-work-reports",
